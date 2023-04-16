@@ -74,7 +74,10 @@ import { CoursesModule } from './modules/courses/courses.module';
 import { DashComponent } from './dash/dash/dash.component';
 import { JitsiComponent } from './jitsi/jitsi.component';
 import { TeamMemberComponent } from './team-member/team-member.component';
-import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
+import { GoogleComponent } from './google/google.component';
+//import { GoogleDriveComponent } from './google-drive/google-drive.component';
+//import { DriveComponent } from './drive/drive.component';
+//import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
 
 
 @NgModule({
@@ -110,12 +113,11 @@ import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
         Checkout2Component,
         JitsiComponent,
         TeamMemberComponent,
-        ReactWrapperComponent,
-        
-        
-      
-        
-        
+        GoogleComponent,
+        //GoogleDriveComponent,
+        //DriveComponent,
+        //ReactWrapperComponent,
+
     ],
     imports: [
         BrowserAnimationsModule,

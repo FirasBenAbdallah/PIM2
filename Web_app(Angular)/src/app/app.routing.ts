@@ -29,35 +29,48 @@ import { DashComponent } from './dash/dash/dash.component';
 import { Checkout2Component} from './user/checkout2/checkout2.component';
 import { JitsiComponent } from './jitsi/jitsi.component';
 import { TeamMemberComponent } from './team-member/team-member.component';
+import {GoogleComponent} from './google/google.component'
 
-const routes: Routes =[
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'index',       component: ArticlesComponent },
-    { path: 'nucleoicons',          component: NucleoiconsComponent },
-    { path: 'examples/landing',     component: LandingComponent },
-    { path: 'inbox',     component: InboxComponent },
-    { path: 'login',       component: LoginComponent },
-    { path: 'register',       component: RegisterComponent },
-    { path: 'verify',       component: VerifyComponent },
-    { path: 'profile',     component: ProfileComponent,canActivate:[AuthGuard]},
-    { path: 'myprofile',     component: MyProfileComponent,canActivate:[AuthGuard]},
-    { path: 'user',     component: UserComponent },
-    { path: 'earnings',  component: EarningsComponent},
-    { path: 'orders',     component: TeacherOrdersComponent },
-    { path: 'myorders',     component: MyordersComponent },
-    { path: 'checkout/:id',     component: Checkout1Component},
-    { path: 'modifycourse/:id',     component: ModifyCourseComponent,canActivate:[AuthGuard] },
-    { path: 'dash',     component: DashComponent},
-    { path: 'checkout/:id/:c',     component: Checkout2Component},
-  
-    {path:  'courses/:id', component: CourseDetailsComponent},
-    {path:  'meeting', component: JitsiComponent},
-    { path: 'member' ,component : TeamMemberComponent},
-   
-    {
-      path: 'courses',
-      loadChildren: () => import('./modules/courses/courses.module').then(m => m.CoursesModule)
-    }
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'index', component: ArticlesComponent },
+  { path: 'nucleoicons', component: NucleoiconsComponent },
+  { path: 'examples/landing', component: LandingComponent },
+  { path: 'inbox', component: InboxComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'verify', component: VerifyComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  {
+    path: 'myprofile',
+    component: MyProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'user', component: UserComponent },
+  { path: 'earnings', component: EarningsComponent },
+  { path: 'orders', component: TeacherOrdersComponent },
+  { path: 'myorders', component: MyordersComponent },
+  { path: 'checkout/:id', component: Checkout1Component },
+  {
+    path: 'modifycourse/:id',
+    component: ModifyCourseComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'dash', component: DashComponent },
+  { path: 'checkout/:id/:c', component: Checkout2Component },
+
+  { path: 'courses/:id', component: CourseDetailsComponent },
+  { path: 'meeting', component: JitsiComponent },
+ // { path: 'drive', component: googleDriveComponent },
+  //  {path : 'drive',component:GoogleDriveComponent},
+  {path:'google',  component :  GoogleComponent},
+  { path: 'member', component: TeamMemberComponent },
+
+  {
+    path: 'courses',
+    loadChildren: () =>
+      import('./modules/courses/courses.module').then((m) => m.CoursesModule),
+  },
   /*  {
         path: 'courses',
         component: AdminLayoutComponent,
