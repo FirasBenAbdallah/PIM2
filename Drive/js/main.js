@@ -10,11 +10,11 @@ auth.onAuthStateChanged(function(user){
        localStorage.setItem("uid",uid); 
        loadfolders();
       
-    }else{
+    }/* else{
         console.log("No Active User");
         //no user is signed in
         window.location.replace("login.html");
-    }
+    } */
 });
 function get($){
 return document.querySelector($);
