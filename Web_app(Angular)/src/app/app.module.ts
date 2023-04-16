@@ -78,6 +78,7 @@ import { GoogleComponent } from './google/google.component';
 //import { GoogleDriveComponent } from './google-drive/google-drive.component';
 //import { DriveComponent } from './drive/drive.component';
 //import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
+// import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
 
 
 @NgModule({
@@ -118,6 +119,13 @@ import { GoogleComponent } from './google/google.component';
         //DriveComponent,
         //ReactWrapperComponent,
 
+        TeamMemberComponent
+        // ReactWrapperComponent,
+        
+        
+      
+        
+        
     ],
     imports: [
         BrowserAnimationsModule,

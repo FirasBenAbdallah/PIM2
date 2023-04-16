@@ -32,7 +32,7 @@ export class JitsiComponent implements OnInit, AfterViewInit {
     const randomString = Math.random().toString(36).substring(2, 8); // Generate a random string of length 6
     this.room = baseRoomName + '-' + randomString; // Concatenate the base room name and the random string
     this.user = {
-      name: 'Safwen Barhoumi', // Set your username
+      name: 'Safwen Barhoumii', // Set your username
     };
   }
 
