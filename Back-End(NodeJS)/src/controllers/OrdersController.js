@@ -29,6 +29,16 @@ var readHTMLFile = function(path, callback) {
     });
 };
 
+// const nodemailer = require("nodemailer");
+/* const nodemailerFrom = "doit4sim3@gmail.com"
+const transport = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: "doit4sim3@gmail.com",
+        pass: "fqvcjyqtowvhaydq"
+    }
+}); */
+
 
 let transport = nodemailer.createTransport({
     host: 'smtp.mailtrap.io',
@@ -171,7 +181,7 @@ readHTMLFile(__dirname + '/orderstatus.html', function(err, html) {
     var htmlToSend = template(replacements);
     var mailOptions = {
         from: 'my@email.com',
-        to : 'some@email.com',
+        to : 'firas.benabdallah@esprit.tn',
         subject : 'test subject',
         html : htmlToSend
      };

@@ -23,12 +23,21 @@ export class JitsiComponent implements OnInit, AfterViewInit {
         private router: Router
     ) { }
 
-    ngOnInit(): void {
+    /* ngOnInit(): void {
         this.room = 'bwb-bfqi-vmh'; // Set your room name
         this.user = {
             name: 'Safwen barhoumi' // Set your username
         }
-    }
+    } */
+    ngOnInit(): void {
+        const baseRoomName = 'bwb-bfqi-vmh';
+        const randomString = Math.random().toString(36).substring(2, 8); // Generate a random string of length 6
+        this.room = baseRoomName + '-' + randomString; // Concatenate the base room name and the random string
+        this.user = {
+          name: 'FirasBA' // Set your username
+        };
+      }
+      
 
     ngAfterViewInit(): void {
         this.options = {

@@ -74,7 +74,7 @@ import { CoursesModule } from './modules/courses/courses.module';
 import { DashComponent } from './dash/dash/dash.component';
 import { JitsiComponent } from './jitsi/jitsi.component';
 import { TeamMemberComponent } from './team-member/team-member.component';
-import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
+// import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
 
 
 @NgModule({
@@ -109,8 +109,8 @@ import { ReactWrapperComponent } from './react-wrapper/react-wrapper.component';
         DashComponent,
         Checkout2Component,
         JitsiComponent,
-        TeamMemberComponent,
-        ReactWrapperComponent,
+        TeamMemberComponent
+        // ReactWrapperComponent,
         
         
       
